@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/spano-fules/', // GitHub Pages repo subpath
+  base: '/', // Custom domain root
   build: {
     outDir: 'dist',
     assetsDir: 'assets'
