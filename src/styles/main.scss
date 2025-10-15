@@ -481,10 +481,6 @@ section {
         opacity: 0;
         transition: opacity 0.3s ease;
 
-        &:hover {
-            opacity: 1;
-        }
-
         .overlay-content {
             color: $white;
             text-align: center;
@@ -501,6 +497,10 @@ section {
                 font-weight: 600;
             }
         }
+    }
+
+    &:hover .image-overlay {
+        opacity: 1;
     }
 }
 

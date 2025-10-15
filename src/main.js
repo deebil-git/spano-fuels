@@ -1,4 +1,4 @@
-import '../styles/main.scss';
+import './styles/main.scss';
 
 // Set current year dynamically
 document.getElementById('current-year').textContent = new Date().getFullYear();
