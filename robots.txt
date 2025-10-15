@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://deebil-git.github.io/spano-fuels/sitemap.xml
+
+# Block admin areas (if any in future)
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /dist/
+
+# Allow all images
+Allow: /src/assets/images/
+Allow: /src/assets/logo/
+Allow: /src/assets/favicon/

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Homepage -->
+    <url>
+        <loc>https://deebil-git.github.io/spano-fuels/</loc>
+        <lastmod>2025-10-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://deebil-git.github.io/spano-fuels/src/assets/logo/logo.png</image:loc>
+            <image:title>Spano Fuel Supply Services LLC Logo</image:title>
+        </image:image>
+    </url>
+    
+    <!-- About Section -->
+    <url>
+        <loc>https://deebil-git.github.io/spano-fuels/#about</loc>
+        <lastmod>2025-10-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Services Section -->
+    <url>
+        <loc>https://deebil-git.github.io/spano-fuels/#services</loc>
+        <lastmod>2025-10-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Gallery Section -->
+    <url>
+        <loc>https://deebil-git.github.io/spano-fuels/#gallery</loc>
+        <lastmod>2025-10-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Contact Section -->
+    <url>
+        <loc>https://deebil-git.github.io/spano-fuels/#contact</loc>
+        <lastmod>2025-10-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Service Landing Pages -->
+    <url>
+        <loc>https://deebil-git.github.io/spano-fuels/services/emergency-fuel-delivery-dubai.html</loc>
+        <lastmod>2024-10-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://deebil-git.github.io/spano-fuels/services/construction-fuel-supply-dubai.html</loc>
+        <lastmod>2024-10-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Blog Posts -->
+    <url>
+        <loc>https://deebil-git.github.io/spano-fuels/blog/uae-fuel-market-trends-2025.html</loc>
+        <lastmod>2024-10-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+</urlset>
