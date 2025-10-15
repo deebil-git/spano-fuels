@@ -231,7 +231,7 @@ function updateCopyrightYear() {
     const yearElement = document.querySelector('.footer-bottom-content p');
     if (yearElement) {
         const currentYear = new Date().getFullYear();
-        yearElement.innerHTML = `&copy; ${currentYear} Spano Fuels. All rights reserved.`;
+        yearElement.innerHTML = `&copy; ${currentYear} Spano Fuel Supply Services LLC. All rights reserved.`;
     }
 }
 
@@ -378,5 +378,89 @@ document.addEventListener('keydown', (e) => {
         prevImage();
     }
 });
+
+// About Section Slideshow
+const slides = document.querySelectorAll('.about-image-slideshow .slide');
+const dots = document.querySelectorAll('.about-image-slideshow .dot');
+const prevBtn = document.getElementById('slideshow-prev');
+const nextBtn = document.getElementById('slideshow-next');
+
+let currentSlide = 0;
+const totalSlides = slides.length;
+
+// Auto-advance slideshow every 4 seconds
+let slideInterval;
+
+function showSlide(index) {
+    // Remove active class from all slides and dots
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Add active class to current slide and dot
+    if (slides[index]) {
+        slides[index].classList.add('active');
+    }
+    if (dots[index]) {
+        dots[index].classList.add('active');
+    }
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    showSlide(currentSlide);
+}
+
+function startSlideshow() {
+    slideInterval = setInterval(nextSlide, 4000);
+}
+
+function stopSlideshow() {
+    clearInterval(slideInterval);
+}
+
+// Initialize slideshow if elements exist
+if (slides.length > 0) {
+    // Set up navigation buttons
+    if (prevBtn) prevBtn.addEventListener('click', () => {
+        prevSlide();
+        stopSlideshow();
+        startSlideshow(); // Restart auto-advance
+    });
+    
+    if (nextBtn) nextBtn.addEventListener('click', () => {
+        nextSlide();
+        stopSlideshow();
+        startSlideshow(); // Restart auto-advance
+    });
+    
+    // Set up dot navigation
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            goToSlide(index);
+            stopSlideshow();
+            startSlideshow(); // Restart auto-advance
+        });
+    });
+    
+    // Pause slideshow on hover
+    const slideshowContainer = document.querySelector('.about-image-slideshow');
+    if (slideshowContainer) {
+        slideshowContainer.addEventListener('mouseenter', stopSlideshow);
+        slideshowContainer.addEventListener('mouseleave', startSlideshow);
+    }
+    
+    // Start the slideshow
+    startSlideshow();
+}
 
 export { showNotification };
