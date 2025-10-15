@@ -984,6 +984,18 @@ section {
         color: $primary-color;
         min-width: 20px;
     }
+
+    // Ensure high-contrast links in dark footer
+    a {
+        color: rgba($white, 0.95);
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: $accent-color;
+            text-decoration: underline;
+        }
+    }
 }
 
 .footer-bottom {
