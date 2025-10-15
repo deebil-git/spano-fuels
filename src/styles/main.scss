@@ -616,6 +616,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 60px;
+    align-items: start;
 
     @media (max-width: $desktop) {
         grid-template-columns: 1fr;
