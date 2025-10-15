@@ -284,4 +284,94 @@ if (mapTabs.length > 0) {
 console.log('%c Welcome to Spano Fuels! ', 'background: #c41e3a; color: white; font-size: 16px; padding: 10px;');
 console.log('%c Premier Fuel Supply Services in UAE ', 'background: #1a472a; color: white; font-size: 14px; padding: 8px;');
 
+// Gallery Lightbox
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxCounter = document.getElementById('lightbox-counter');
+const lightboxClose = document.getElementById('lightbox-close');
+const lightboxPrev = document.getElementById('lightbox-prev');
+const lightboxNext = document.getElementById('lightbox-next');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+let currentImageIndex = 0;
+const galleryImages = Array.from(galleryItems).map(item => ({
+    src: item.querySelector('img').src,
+    alt: item.querySelector('img').alt
+}));
+
+// Open lightbox
+function openLightbox(index) {
+    currentImageIndex = index;
+    updateLightboxImage();
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+// Close lightbox
+function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Update lightbox image
+function updateLightboxImage() {
+    if (galleryImages[currentImageIndex]) {
+        lightboxImg.src = galleryImages[currentImageIndex].src;
+        lightboxImg.alt = galleryImages[currentImageIndex].alt;
+        lightboxCounter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+    }
+}
+
+// Next image
+function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+    updateLightboxImage();
+}
+
+// Previous image
+function prevImage() {
+    currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+    updateLightboxImage();
+}
+
+// Add click events to gallery items
+galleryItems.forEach((item, index) => {
+    item.addEventListener('click', () => openLightbox(index));
+});
+
+// Lightbox controls
+if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
+}
+
+if (lightboxNext) {
+    lightboxNext.addEventListener('click', nextImage);
+}
+
+if (lightboxPrev) {
+    lightboxPrev.addEventListener('click', prevImage);
+}
+
+// Close lightbox when clicking outside image
+if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    
+    if (e.key === 'Escape') {
+        closeLightbox();
+    } else if (e.key === 'ArrowRight') {
+        nextImage();
+    } else if (e.key === 'ArrowLeft') {
+        prevImage();
+    }
+});
+
 export { showNotification };
