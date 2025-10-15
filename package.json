@@ -1,0 +1,25 @@
+{
+  "name": "spano-fuels-website",
+  "version": "1.0.0",
+  "description": "Professional website for Spano Fuels - UAE based fuel supply company",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["fuel-supply", "uae", "energy", "website", "vite"],
+  "author": "Spano Fuels",
+  "license": "MIT",
+  "homepage": "https://spano-fuels.com",
+  "devDependencies": {
+    "@vitejs/plugin-legacy": "^7.2.1",
+    "gh-pages": "^6.3.0",
+    "sass": "^1.93.2",
+    "vite": "^7.1.10"
+  }
+}
