@@ -1,7 +1,7 @@
 {
   "name": "spano-fuels-website",
   "version": "1.0.0",
-  "description": "Professional website for Spano Fuels - UAE based fuel supply company",
+  "description": "Professional website for Spano Fuel Supply Services LLC - UAE based fuel supply company",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -13,7 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["fuel-supply", "uae", "energy", "website", "vite"],
-  "author": "Spano Fuels",
+  "author": "Spano Fuel Supply Services LLC",
   "license": "MIT",
   "homepage": "https://spano-fuels.com",
   "devDependencies": {

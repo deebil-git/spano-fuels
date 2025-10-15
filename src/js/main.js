@@ -286,8 +286,8 @@ if (mapTabs.length > 0) {
 }
 
 // Console message
-console.log('%c Welcome to Spano Fuels! ', 'background: #c41e3a; color: white; font-size: 16px; padding: 10px;');
-console.log('%c Premier Fuel Supply Services in UAE ', 'background: #1a472a; color: white; font-size: 14px; padding: 8px;');
+console.log('%c Welcome to Spano Fuel! ', 'background: #c41e3a; color: white; font-size: 16px; padding: 10px;');
+console.log('%c Premium Fuel Distribution in UAE ', 'background: #1a472a; color: white; font-size: 14px; padding: 8px;');
 
 // Gallery Lightbox
 const lightbox = document.getElementById('lightbox');
